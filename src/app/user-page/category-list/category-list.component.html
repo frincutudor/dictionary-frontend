@@ -1,0 +1,12 @@
+
+<div class="row">
+
+ 
+  <div class="col-xs-6">
+    <app-word-item
+      *ngFor="let wordEl of words; let i=index;"
+      [word]="wordEl"
+      [index]="i"></app-word-item>
+  </div>
+</div>
+

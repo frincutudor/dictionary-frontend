@@ -1,0 +1,45 @@
+
+<div class="row">
+  <div class="col-xs-12">
+    <div
+      routerLinkActive="active"
+      *ngIf ="isAdmin"
+      class="btn-group"
+      appDropdown>
+      <button
+        
+        type="button"
+        class="btn btn-primary dropdown-toggle">
+        
+        Manage Word <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a style="cursor:pointer;"
+              (click)="onEditRecipe()">Edit word</a></li>
+        <li><a style="cursor:pointer;"
+              (click)="onDeleteRecipe()">Delete word</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{ word.name }}</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+   <label>Category: </label> {{ word.category}}
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-xs-12">
+   <label>Definition: </label>  {{ word.definition}}
+  </div>
+</div>
+

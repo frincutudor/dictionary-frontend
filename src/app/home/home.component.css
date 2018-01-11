@@ -1,0 +1,94 @@
+@import url(http://fonts.googleapis.com/css?family=Cantora+One|Ropa+Sans:400,400italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700italic,700,800,800italic&subset=latin,greek,cyrillic,latin-ext,greek-ext,vietnamese,cyrillic-ext);
+body { line-height:1; font-family: 'Ubuntu', sans-serif; margin:0; padding:0; width:100%; height:100%; }
+div { box-sizing: border-box; }
+table { border-collapse: collapse; width: 100%; }
+th { text-align: left; padding: 8px; font-size: 14px; font-weight: bold; }
+td { text-align: left; padding: 8px; font-size: 14px; }
+tr:nth-child(even){background-color: #f2f2f2}
+th { background-color: #14181C; color: white; }
+a:link {text-decoration:none; color:#212529; }   
+a:visited {text-decoration:none; color:#212529; }
+a:hover {text-decoration:none; color:#666; }
+td input {text-decoration:none; border:0; background-color: transparent; width: 100%; }
+td textarea {text-decoration:none; border:0; background-color: transparent; width: 100%; overflow-x: none; }
+button { border:0; }
+
+
+.full_page {
+    float: left;
+    height: 100%;
+    width: 100%;
+}
+
+
+.login_page {
+    /* background-image: url(https://firebasestorage.googleapis.com/v0/b/make-noise-cc269.appspot.com/o/dashboard%2Fpoza.jpeg?alt=media&token=8cc57d5a-7843-4658-a54b-29f85148a80a); */
+    background-repeat:no-repeat;
+    background-size:cover;
+    width:100%;
+    height:100%;
+    float: left;
+    position: fixed;
+    background-color: #3fb0ac;
+}
+
+.login_frame {
+    margin-left: calc(50% - 200px);
+    height:400px;
+    float: left;
+    background-color: rgba(0,0,0,0.7);
+    width: 400px;
+    margin-top:100px;
+    border-radius: 4px;
+    opacity: 0.7;
+}
+
+.user_image {
+    width:100px;
+    height: 100px;
+    background-color: #fff;
+    color:#212529;
+    font-size: 72px;
+    border-radius: 100px;
+    margin:20px 0 20px 150px;
+}
+
+.login_input {
+    width:340px;
+    background-color: rgba(0,0,0,1);
+    padding:10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    margin:10px 0 0 30px;
+    border:0;
+    color:#fff;
+}
+
+.login_submit {
+    width:340px;
+    padding:10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    margin:10px 0 0 30px;
+    border:0;
+    color:#fff;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+  background: #33cccc;
+  background-image: -webkit-linear-gradient(top, #33cccc, #2bb6b6);
+  background-image: -moz-linear-gradient(top, #33cccc, #2bb6b6);
+  background-image: -ms-linear-gradient(top, #33cccc, #2bb6b6);
+  background-image: -o-linear-gradient(top, #33cccc, #2bb6b6);
+  background-image: linear-gradient(to bottom, #33cccc, #2bb6b6);
+}
+
+.login_submit:hover {
+  background: #31cccc;
+  background-image: -webkit-linear-gradient(top, #31cccc, #31cccc);
+  background-image: -moz-linear-gradient(top, #31cccc, #31cccc);
+  background-image: -ms-linear-gradient(top, #31cccc, #31cccc);
+  background-image: -o-linear-gradient(top, #31cccc, #31cccc);
+  background-image: linear-gradient(to bottom, #31cccc, #31cccc);
+}

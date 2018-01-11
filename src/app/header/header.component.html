@@ -1,0 +1,30 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a routerLink="/" class="navbar-brand">Dictionary Book</a>
+    </div>
+
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+         <li ><label style="margin-top: 14px" >Search </label></li>
+        <li ><input style="margin-top: 12px"></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      
+        <li><a style="cursor : pointer;" (click)="onLogout()">Logout</a></li>
+        <li class="dropdown" appDropdown *ngIf="true">
+          <a style="cursor:pointer;" class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a style="cursor:pointer;" (click)="onSelectedCategory('a')">A</a></li>
+            <li><a style="cursor:pointer;">B</a></li>
+            <li><a style="cursor:pointer;">C</a></li>
+            <li><a style="cursor:pointer;">D</a></li>
+            <li><a style="cursor:pointer;">E</a></li>
+            <li><a style="cursor:pointer;">F</a></li>
+            <li><a style="cursor:pointer;">G</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
