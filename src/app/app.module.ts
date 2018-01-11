@@ -18,6 +18,12 @@ import { WordListComponent } from './user-page/word-list/word-list.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { CategoryListComponent } from './user-page/category-list/category-list.component';
 import { WordDetailComponent } from './user-page/word-detail/word-detail.component';
+import { UsersComponent } from './users/users.component';
+import { UsersListComponent } from './users/users-list/users-list.component';
+import { UserItemComponent } from './users/user-item/user-item.component';
+import { UserDetailComponent } from './users/user-detail/user-detail.component';
+import { RegisterComponent } from './register/register.component';
+import { NotificationsService } from './notification-center.service';
 
 
 
@@ -32,6 +38,11 @@ import { WordDetailComponent } from './user-page/word-detail/word-detail.compone
     DropdownDirective,
     CategoryListComponent,
     WordDetailComponent,
+    UsersComponent,
+    UsersListComponent,
+    UserItemComponent,
+    UserDetailComponent,
+    RegisterComponent,
     
     
     
@@ -42,7 +53,7 @@ import { WordDetailComponent } from './user-page/word-detail/word-detail.compone
     FormsModule,
     HttpModule
   ],
-  providers: [AuthService , AuthGuard ,DataStorageService],
+  providers: [AuthService , AuthGuard ,DataStorageService,NotificationsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

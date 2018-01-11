@@ -2,17 +2,15 @@
 
 
   <div class="login_page">
-    <form (ngSubmit)="onSignIn(f)" #f="ngForm">
+    <form (ngSubmit)="onRegister(f)" #f="ngForm">
     <div class="login_frame">
       <button class="user_image">
         <i class="fa fa-user" aria-hidden="true"></i>
       </button>
       <input class="login_input" placeholder="User" name="email" ngModel>
       <input class="login_input" placeholder="Password" type="password" name="password" ngModel>
-      <button id="login_submit" class = "login_submit" type="submit">Login</button>
-      <hr>
-      <button id="register_submit" class = "login_submit" type="button" (click)="onRegisterClicked()">Register</button>
-     
+      <button id="login_submit" class = "login_submit" type="submit">Register</button>
+      
     </div>
   </form>
   </div>

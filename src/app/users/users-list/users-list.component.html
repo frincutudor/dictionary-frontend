@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-xs-6">
+    <button *ngIf ="isAdmin" class="btn btn-success">New user</button>
+  </div>
+</div>
+<hr>
+
+<div class="row">
+  <div class="col-xs-6">
+    <h2>Active Users</h2>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-xs-12">
+    <app-user-item *ngFor="let userEl of users; let i=index; " [user]="userEl" [index]="i" [mode]="'false'" ></app-user-item>
+  </div>
+</div>
+
+<hr>
+
+<div class="row">
+  <div class="col-xs-6">
+    <h2>Pending Users</h2>
+  </div>
+</div>
+
+
+<div class="row">
+
+  <div class="col-xs-12">
+    <app-user-item *ngFor="let userEl2 of usersPending; let i=index;" [user]="userEl2" [index]="i"  [mode]="'true'"></app-user-item>
+  </div>
+</div>

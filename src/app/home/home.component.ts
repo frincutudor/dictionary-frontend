@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthService } from './auth.service';
+import {Router, ActivatedRoute} from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
@@ -9,7 +11,10 @@ import { AuthService } from './auth.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private authService : AuthService) { }
+  constructor(private authService : AuthService,
+            private router : Router, 
+             private route : ActivatedRoute,
+          ) { }
 
   ngOnInit() {
   }
@@ -20,6 +25,14 @@ export class HomeComponent implements OnInit {
     const password : string = form.value.password;
     this.authService.onSignIn(email , password);
     
+  }
+
+  onRegisterClicked(){
+
+    console.log('aci')
+    this
+    .router
+    .navigate(['register']);
   }
 
 }

@@ -31,4 +31,8 @@ export class HeaderComponent implements OnInit {
 
   }
 
+  onUsersClicked(){
+    this.router.navigate(['users']);
+  }
+
 }

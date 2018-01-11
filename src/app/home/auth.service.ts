@@ -1,3 +1,4 @@
+import { NotificationsService } from './../notification-center.service';
 import {Injectable} from "@angular/core";
 import {Http, Headers} from "@angular/http";
 import {User} from "../shared/user.model";
@@ -13,9 +14,9 @@ import {RequestOptions} from '@angular/http';
 export class AuthService {
 
     private url : string;
-    private authenticatedUser;
-
-    constructor(private http : Http, private router : Router) {}
+    private authenticatedUser : User;
+    
+    constructor(private http : Http, private router : Router , private notificationService: NotificationsService) {}
 
     onSignIn(username : string, password : string) {
 
@@ -46,7 +47,7 @@ export class AuthService {
     }
 
     isAuthenticated() {
-        return this.authenticatedUser != null;
+        return this.authenticatedUser != null && this.authenticatedUser.pending === "false";
     }
 
    
@@ -59,5 +60,25 @@ export class AuthService {
 
     isUserAdmin() {
         return this.authenticatedUser.role === "ADMIN";
+    }
+
+    onRegister(email : string , password : string){
+        
+        let user = new UserView(email, password);
+        const header = new Headers({'Content-Type': 'application/json'});
+
+        this
+            .http
+            .post("http://localhost:8080/register", user, {headers: header}).
+          subscribe((response: Response) => {
+
+               //this.notificationService.showNotification('top','center','success' , 'Your request was send to our staff.')
+                this
+                        .router
+                        .navigate(['home']);
+
+                       
+            });
+
     }
 }
